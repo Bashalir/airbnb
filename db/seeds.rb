@@ -20,7 +20,7 @@ City.destroy_all
   chosen_city = City.all.sample
 
   dogsitter = Dogsitter.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, city: chosen_city)
-  dog = Dog.create(name: Faker::Superhero.descriptor, city: chosen_city)
+  dog = Dog.create(name: Faker::Creature::Dog.name, city: chosen_city)
 end
 
 200.times do |i|
